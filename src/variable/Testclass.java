@@ -3,12 +3,12 @@ package variable;
 import java.util.Scanner;
 
 public class Testclass {
-	public String name , grade;
-	public int kor,eng,math,sum;
-	public double avg;
+	public String name , grade; // 스트링으로 출력 받을 값을 미리 선정해준다
+	public int kor,eng,math,sum; // 인트값으로 받을 변수를 입력해준다
+	public double avg; // 소수점이 나올 수 있기때문에 더블로 평균값을 등록
 	
 	
-	public void inputData() {
+	public void inputData() {// 문제를 출력해줄 값 메소드 생성 / 스캐너를 이용해서 직접 적을 수 있게 한다
 		Scanner input = new Scanner(System.in);
 		System.out.println("이름을 입력하세요");
 		name = input.next();
@@ -22,7 +22,7 @@ public class Testclass {
 		
 	}
 	
-	public void operationData() {
+	public void operationData() { // 기능구현 메소드 생성/합계,평군값,등급 을 출력해주는 기능을 구현한다 
 		sum = kor + eng + math;
 		avg = sum/3;
 		if(avg >=90) {
@@ -34,7 +34,7 @@ public class Testclass {
 		}
 	
 	}
-	public void pirntData() {
+	public void pirntData() { // 마지막으로 기능들을 출력해줄 메소드를 생성한다.
 		System.out.println("이름 :" + name);
 		System.out.println("국어점수 :" + kor);
 		System.out.println("영어점수 :" + eng);
